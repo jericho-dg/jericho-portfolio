@@ -1,6 +1,6 @@
 export const site = {
   name: "Jericho de Guzman",
-  discipline: "Full-stack engineer",
+  discipline: "Full-stack developer, Student",
   location: "Irvine, CA",
   year: "2026",
 } as const;
@@ -10,7 +10,7 @@ export const nav = [{ id: "projects", label: "Projects" }] as const;
 export const hero = {
   title: "Building intricate, interactive, intelligent web systems",
   summary:
-    "Hey, I'm Jericho! I'm a full-stack engineer specializing in crafting minimalist and intuitive applications and user experiences. I'm immensely passionate about creating well-designed software with real impact.",
+    "Hey, I'm Jericho! I'm an undergraduate CS student at UC Irvine. I'm also a full-stack developer specializing in crafting minimalist and intuitive applications and user experiences. I'm immensely passionate about creating well-designed software with real impact.",
   specs: [
     {
       label: "Skills",
@@ -22,7 +22,7 @@ export const hero = {
     },
     {
       label: "Tools/Frameworks",
-      value: "Figma, React, Next.js, Tailwind, Cursor, MongoDB",
+      value: "Next.js, React, Figma, Tailwind, Cursor, SQL",
     },
   ],
 } as const;
