@@ -135,14 +135,17 @@ function ProjectLiveDemo({
   embed,
   name,
   active,
+  muted,
+  setMuted,
 }: {
   video: string
   embed: string
   name: string
   active: boolean
+  muted: boolean
+  setMuted: (value: boolean | ((current: boolean) => boolean)) => void
 }) {
   const [live, setLive] = useState(false)
-  const [muted, setMuted] = useState(false)
 
   useEffect(() => {
     if (!active) setLive(false)
@@ -205,12 +208,15 @@ function ProjectVideoDemo({
   video,
   name,
   active,
+  muted,
+  setMuted,
 }: {
   video: string
   name: string
   active: boolean
+  muted: boolean
+  setMuted: (value: boolean | ((current: boolean) => boolean)) => void
 }) {
-  const [muted, setMuted] = useState(false)
 
   return (
     <div className="group absolute inset-0 overflow-hidden">
@@ -287,6 +293,7 @@ export function ProjectRail() {
   const [index, setIndex] = useState(0)
   const [atStart, setAtStart] = useState(true)
   const [atEnd, setAtEnd] = useState(false)
+  const [muted, setMuted] = useState(false)
 
   function stepSize() {
     const el = scroller.current
@@ -434,12 +441,16 @@ export function ProjectRail() {
                       embed={project.embed!}
                       name={project.name}
                       active={active}
+                      muted={muted}
+                      setMuted={setMuted}
                     />
                   ) : project.video ? (
                     <ProjectVideoDemo
                       video={project.video}
                       name={project.name}
                       active={active}
+                      muted={muted}
+                      setMuted={setMuted}
                     />
                   ) : (
                     <iframe
