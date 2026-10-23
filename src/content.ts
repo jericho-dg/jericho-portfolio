@@ -38,6 +38,7 @@ export type Project = {
   hrefLabel?: string;
   details?: string;
   embed?: string;
+  video?: string;
   images?: readonly { src: string; alt: string }[];
 };
 
@@ -47,6 +48,7 @@ export const projects: readonly Project[] = [
     name: "Javascript Game Engine",
     href: "https://js-game-engine.vercel.app",
     hrefLabel: "js-game-engine.vercel.app",
+    video: "/videos/js-game-engine.mp4",
     embed: "https://js-game-engine.vercel.app",
     summary:
       "With AI-assistance, built a fully-fledged 2D game-development platform for web, where users can build complete games with physics and custom scripts, and can share and publish games publicly.",
@@ -62,39 +64,27 @@ export const projects: readonly Project[] = [
     details:
       "Used React Native with Expo to build a front-end cycle calendar with user data input, then connected the calendar to the back-end AI prediction model, all taking advantage of Cursor for rapid development.",
     year: "Apr. – Sep. 2026",
-    images: [
-      {
-        src: "/bloom/colors.jpg",
-        alt: "Bloom Health calendar color legend",
-      },
-      {
-        src: "/bloom/calendar.jpg",
-        alt: "Bloom Health calendar with a day ready to log",
-      },
-      {
-        src: "/bloom/log-flow.png",
-        alt: "Bloom Health log flow screen for bleeding intensity",
-      },
-    ],
+    video: "/videos/bloom.mp4",
   },
   {
     index: "03",
     name: "HomePilot",
     href: "https://v0-homepilot.vercel.app/",
     hrefLabel: "v0-homepilot.vercel.app",
+    video: "/videos/homepilot.mp4",
     embed: "https://v0-homepilot.vercel.app/",
     summary:
       "Worked with a team of 4 developers to develop and deploy HomePilot in under 36 hours: an AI-powered rental assistant that matches users to personalized listings from Zillow or Apartments.com, and provides powerful housing application guidance and optimization tools.",
     details:
       "Used Figma and React to design and build the front-end user interface, utilizing Cursor and Figma Make to discover and iterate solutions rapidly yet carefully.",
-    year: "Sep. 2026",
+    year: "Feb. 2026",
   },
   {
     index: "04",
     name: "Kandor",
     href: "https://kandor.tech/",
     hrefLabel: "kandor.tech",
-    embed: "https://kandor.tech/",
+    video: "/videos/kandor.mp4",
     context: "Hacktech",
     summary:
       "Worked with a team of 4 developers on Kandor, a browser extension that scans conversations for high-risk safety threats such as grooming, solicitation, or harassment, alerting the user to great concerns with risk level and recommended action.",
